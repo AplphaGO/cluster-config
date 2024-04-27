@@ -11,24 +11,27 @@ default:
       namespace: openshift-gitops
       server: https://kubernetes.default.svc
     source:
-      repoURL: https://github.com/gnunn-gitops/cluster-config.git
+      repoURL: https://github.com/AplphaGO/cluster-config.git
       targetRevision: HEAD
 
 applications:
 
   node-config:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '0'
     source:
       path: clusters/overlays/local.hub/components/node-config
 
   odf-operator:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '1'
     source:
       path: components/odf-operator/operator/overlays/no-registry
 
   lvm-operator:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '2'
     destination:
@@ -37,6 +40,7 @@ applications:
       path: clusters/overlays/local.hub/components/lvm-operator
 
   odf-instance:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '2'
     destination:
@@ -45,6 +49,7 @@ applications:
       path: components/odf-operator/instance/base
 
   acs:
+    enabled: false  
     annotations:
       argocd.argoproj.io/sync-wave: '21'
     destination:
@@ -53,6 +58,7 @@ applications:
       path: clusters/overlays/local.hub/components/acs-operator
 
   acm-hub:
+    enabled: false  
     annotations:
       argocd.argoproj.io/sync-wave: '21'
     labels:
@@ -60,10 +66,11 @@ applications:
     destinations:
       namespace: open-cluster-management
     source:
-      repoURL: https://github.com/gnunn-gitops/acm-hub-bootstrap.git
+      repoURL: https://github.com/AplphaGO/acm-hub-bootstrap.git
       path: components/apps/acm/overlays/hub
 
   acm-observability:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '31'
     labels:
@@ -71,10 +78,11 @@ applications:
     destinations:
       namespace: open-cluster-management-observability
     source:
-      repoURL: https://github.com/gnunn-gitops/acm-hub-bootstrap.git
+      repoURL: https://github.com/AplphaGO/acm-hub-bootstrap.git
       path: components/apps/acm/overlays/observability
 
   acm-policies:
+    enabled: false
     enableAutoSync: false
     annotations:
       argocd.argoproj.io/sync-wave: '31'
@@ -83,10 +91,10 @@ applications:
     destinations:
       namespace: acm-policies
     source:
-      repoURL: https://github.com/gnunn-gitops/acm-hub-bootstrap.git
+      repoURL: https://github.com/AplphaGO/acm-hub-bootstrap.git
       path: bootstrap/policies/overlays/default
-
   acm-clusters:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '31'
     labels:
@@ -94,12 +102,11 @@ applications:
     destinations:
       namespace: openshift-gitops
     source:
-      repoURL: https://github.com/gnunn-gitops/acm-hub-bootstrap.git
+      repoURL: https://github.com/AplphaGO/acm-hub-bootstrap.git
       path: components/clusters/base
-
   # Disable while we work this out
   nmstate:
-    enabled: true
+    enabled: falses
     source:
       path: clusters/overlays/local.hub/components/nmstate
 
@@ -110,34 +117,35 @@ applications:
       path: clusters/overlays/local.hub/components/banner
 
   console:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '11'
     source:
       path: clusters/overlays/local.hub/components/console
-
   console-links:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '11'
     source:
       path: clusters/overlays/local.hub/components/consolelinks
-
   certificates:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: "3"
     destination:
       namespace: cert-manager-operator
     source:
       path: clusters/overlays/local.hub/components/certificates
-
   dev-tools:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '31'
     destination:
       namespace: dev-tools
     source:
       path: components/dev-tools/overlays/default
-
   openshift-monitoring:
+    enabled: false
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
       argocd.argoproj.io/sync-wave: '11'
@@ -155,6 +163,7 @@ applications:
       path: clusters/overlays/local.hub/components/quay-registry-operator
 
   cost-management:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '21'
     destination:

@@ -60,7 +60,7 @@ spec:
     git-resolver-config:
       default-revision: main
       fetch-timeout: 1m
-      default-url: https://github.com/gnunn-gitops/tekton-catalog
+      default-url: https://github.com/AplphaGO/tekton-catalog
   platforms:
     openshift:
       pipelinesAsCode:

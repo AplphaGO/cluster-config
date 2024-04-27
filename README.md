@@ -1,6 +1,6 @@
 # GitOps Cluster Configuration
 
-This repo contains the cluster configuration I use for my personal OpenShift clusters. Like my other GitOps repos it leverages ArgoCD heavily. This repo originally followed the folder structure defined in the [Standards](https://github.com/gnunn-gitops/standards) repository but there has been some tweaks that need to be reflected back in that document.
+This repo contains the cluster configuration I use for my personal OpenShift clusters. Like my other GitOps repos it leverages ArgoCD heavily. This repo originally followed the folder structure defined in the [Standards](https://github.com/AplphaGO/standards) repository but there has been some tweaks that need to be reflected back in that document.
 
 # Structure
 
@@ -13,7 +13,7 @@ Similar to my standards document, the repo consists of four high level folders:
 
 While this structure follows the basic principles in my standards document I am in the process of re-factoring the naming as well as attempting to simplify the level of nesting.
 
-![alt text](https://raw.githubusercontent.com/gnunn-gitops/cluster-config/main/docs/img/argocd.png)
+![alt text](https://raw.githubusercontent.com/AplphaGO/cluster-config/main/docs/img/argocd.png)
 
 Finally note that I deliberately have everything in the same repository for demo purposes. Folks dealing with a lot of clusters and tenants will likely want to split things out into multiple repositories.
 
@@ -63,7 +63,7 @@ spec:
 
 How this bootstrap application gets generated and managed can happen in a variety of different ways:
 
-* [Red Hat Advanced Cluster Manager](https://www.redhat.com/en/technologies/management/advanced-cluster-management) can use a policy to deploy OpenShift GitOps plus a cluster specific bootstrap application across a fleet of clusters. This is my preferred approach and the [acm-bootstrap-hub](https://github.com/gnunn-gitops/acm-hub-bootstrap) is the repo where I have this policy along with other things I use to bootstrap the ACM Hub cluster.
+* [Red Hat Advanced Cluster Manager](https://www.redhat.com/en/technologies/management/advanced-cluster-management) can use a policy to deploy OpenShift GitOps plus a cluster specific bootstrap application across a fleet of clusters. This is my preferred approach and the [acm-bootstrap-hub](https://github.com/AplphaGO/acm-hub-bootstrap) is the repo where I have this policy along with other things I use to bootstrap the ACM Hub cluster.
 * Ansible. If you use Ansible for cluster provisioning you can have it deploy the OpenShift GitOps operator plus the bootstrap application
 * Other. If you use other automation tools to provision clusters they could do the same as Ansible.
 
@@ -83,7 +83,7 @@ In cases where a configuration spans multiple repositories you may need to have 
 
 Commit pinning for specific applications is also straightforward, either by overriding the default `targetRevision` in the App-of-App Helm chart for a specific application or patching it via kustomize.
 
-See the repo [cluster-config-pins](https://github.com/gnunn-gitops/cluster-config-pins) for more information on how commit pinning is being used here.
+See the repo [cluster-config-pins](https://github.com/AplphaGO/cluster-config-pins) for more information on how commit pinning is being used here.
 
 # Sequence
 

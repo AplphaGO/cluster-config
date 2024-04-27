@@ -8,7 +8,7 @@ spec:
   - git:
       directories:
       - path: tenants/**/base
-      repoURL: https://github.com/gnunn-gitops/cluster-config
+      repoURL: https://github.com/AplphaGO/cluster-config
       revision: main
   goTemplate: true
   syncPolicy:
@@ -23,7 +23,7 @@ spec:
       project: cluster-config
       source:
         path: '{{ .path.path }}'
-        repoURL: https://github.com/gnunn-gitops/cluster-config
+        repoURL: https://github.com/AplphaGO/cluster-config
       syncPolicy:
         automated:
           selfHeal: true

@@ -11,7 +11,7 @@ default:
       namespace: openshift-gitops
       server: https://kubernetes.default.svc
     source:
-      repoURL: https://github.com/gnunn-gitops/cluster-config.git
+      repoURL: https://github.com/AplphaGO/cluster-config.git
       targetRevision: HEAD
 
 projects:
@@ -23,9 +23,9 @@ projects:
     description: Project for overall cluster configuration
     namespace: openshift-gitops
     sourceRepos:
-    - https://github.com/gnunn-gitops/cluster-config
+    - https://github.com/AplphaGO/cluster-config
     - https://github.com/redhat-cop/gitops-catalog
-    - https://github.com/gnunn-gitops/acm-hub-bootstrap
+    - https://github.com/AplphaGO/acm-hub-bootstrap
     destinations: |
       - namespace: '*'
         server: https://kubernetes.default.svc
@@ -46,6 +46,7 @@ applications:
       path: components/compliance-operator/overlays/cis-compliance
 
   container-security:
+    enabled: false
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
       argocd.argoproj.io/sync-wave: '21'
@@ -55,6 +56,7 @@ applications:
       path: components/container-security-operator/overlays/stable-3.10
 
   external-secrets:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '1'
     destination:
@@ -70,6 +72,7 @@ applications:
       path: components/helm-repos/base
 
   pipeline-operator:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: "21"
       argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true

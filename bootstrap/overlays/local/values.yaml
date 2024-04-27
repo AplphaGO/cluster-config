@@ -11,7 +11,7 @@ default:
       namespace: openshift-gitops
       server: https://kubernetes.default.svc
     source:
-      repoURL: https://github.com/gnunn-gitops/cluster-config.git
+      repoURL: https://github.com/AplphaGO/cluster-config.git
       targetRevision: HEAD
 
 applications:
@@ -25,22 +25,23 @@ applications:
       path: components/cert-manager-operator/aggregate/overlays/letsencrypt
 
   authentication:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '4'
     destination:
       namespace: openshift-config
     source:
       path: components/oauth/overlays/homelab
-
   registry:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '5'
     destination:
       namespace: openshift-image-registry
     source:
       path: components/registry-sno/base
-
   alertmanager:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '11'
     destination:
@@ -81,13 +82,13 @@ applications:
           jsonPointers:
           - /spec/rules
 
-  # web-terminal:
-  #   annotations:
-  #     argocd.argoproj.io/sync-wave: '21'
-  #   destination:
-  #     namespace: openshift-operators
-  #   source:
-  #     path: components/web-terminal-operator/base
+   web-terminal:
+     annotations:
+       argocd.argoproj.io/sync-wave: '21'
+     destination:
+       namespace: openshift-operators
+     source:
+       path: components/web-terminal-operator/base
 
   defrag-etcd:
     annotations:

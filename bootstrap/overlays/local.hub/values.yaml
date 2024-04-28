@@ -106,7 +106,7 @@ applications:
       path: components/clusters/base
   # Disable while we work this out
   nmstate:
-    enabled: falses
+    enabled: false
     source:
       path: clusters/overlays/local.hub/components/nmstate
 

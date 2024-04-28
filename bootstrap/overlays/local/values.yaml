@@ -17,6 +17,7 @@ default:
 applications:
 
   cert-manager-operator:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: "2"
     destination:
@@ -25,13 +26,13 @@ applications:
       path: components/cert-manager-operator/aggregate/overlays/letsencrypt
 
   authentication:
-    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '4'
     destination:
       namespace: openshift-config
     source:
-      path: components/oauth/overlays/homelab
+      path: components/oauth/overlays/htpass
+
   registry:
     enabled: false
     annotations:
@@ -40,6 +41,7 @@ applications:
       namespace: openshift-image-registry
     source:
       path: components/registry-sno/base
+
   alertmanager:
     enabled: false
     annotations:

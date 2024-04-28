@@ -81,8 +81,8 @@ applications:
           kind: Policy
           jsonPointers:
           - /spec/rules
-
-   web-terminal:
+          
+  web-terminal:
      annotations:
        argocd.argoproj.io/sync-wave: '21'
      destination:

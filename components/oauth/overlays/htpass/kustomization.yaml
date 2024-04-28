@@ -5,7 +5,7 @@ resources:
 patches:
   - patch: |-
       - op: add
-        path: /spec/identityProviders
+        path: /spec/identityProviders/0
         value:
           htpasswd:
             fileData:

@@ -93,6 +93,7 @@ applications:
     source:
       repoURL: https://github.com/AplphaGO/acm-hub-bootstrap.git
       path: bootstrap/policies/overlays/default
+
   acm-clusters:
     enabled: false
     annotations:
@@ -104,6 +105,7 @@ applications:
     source:
       repoURL: https://github.com/AplphaGO/acm-hub-bootstrap.git
       path: components/clusters/base
+
   # Disable while we work this out
   nmstate:
     enabled: false
@@ -122,12 +124,14 @@ applications:
       argocd.argoproj.io/sync-wave: '11'
     source:
       path: clusters/overlays/local.hub/components/console
+
   console-links:
     enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '11'
     source:
       path: clusters/overlays/local.hub/components/consolelinks
+
   certificates:
     enabled: false
     annotations:
@@ -136,6 +140,7 @@ applications:
       namespace: cert-manager-operator
     source:
       path: clusters/overlays/local.hub/components/certificates
+
   dev-tools:
     enabled: false
     annotations:
@@ -144,6 +149,7 @@ applications:
       namespace: dev-tools
     source:
       path: components/dev-tools/overlays/default
+
   openshift-monitoring:
     enabled: false
     annotations:
@@ -193,3 +199,11 @@ applications:
       namespace: acm-policies
     source:
       path: components/kyverno-acm/base
+
+  authentication:
+    annotations:
+      argocd.argoproj.io/sync-wave: '4'
+    destination:
+      namespace: openshift-config
+    source:
+      path: components/sso/overlays/default

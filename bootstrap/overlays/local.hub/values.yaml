@@ -207,3 +207,29 @@ applications:
       namespace: openshift-config
     source:
       path: components/sso/overlays/default
+
+  vault:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '31'
+    destination:
+      namespace: vault
+    source:
+      path: components/vault
+    extraFields: |
+      ignoreDifferences:
+        - group: 'apps'
+          jsonPointers:
+            - /spec/volumeClaimTemplates
+          kind: StatefulSet
+  
+  vault-config-operator:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '32'
+    destination:
+      namespace: vault-config-operator
+    source:
+      path: components/vault-config-operator
+
+  

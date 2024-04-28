@@ -200,7 +200,7 @@ applications:
     source:
       path: components/kyverno-acm/base
 
-  authentication:
+  authentication-sso:
     annotations:
       argocd.argoproj.io/sync-wave: '4'
     destination:

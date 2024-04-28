@@ -25,7 +25,7 @@ applications:
     source:
       path: components/cert-manager-operator/aggregate/overlays/letsencrypt
 
-  authentication:
+  authentication-htpass:
     annotations:
       argocd.argoproj.io/sync-wave: '4'
     destination:

@@ -12,4 +12,5 @@ spec:
   profile: RHSSO
   externalAccess:
     enabled: true
-    host: sso.${SUB_DOMAIN} 
+    #host: sso.${SUB_DOMAIN} 
+    #bug: https://access.redhat.com/solutions/6365791

@@ -22,13 +22,13 @@ patches:
     patch: |
       - op: replace
         path: /spec/host
-        value: "vault.apps.${CLUSTER_NAME}.${SUB_DOMAIN}"    
+        value: "vault.${SUB_DOMAIN}"    
   - target:
       kind: ConsoleLink
     patch: |
       - op: replace
         path: /spec/href
-        value: "https://vault.apps.${CLUSTER_NAME}.${SUB_DOMAIN}"
+        value: "https://vault.${SUB_DOMAIN}"
            
 
 helmCharts:

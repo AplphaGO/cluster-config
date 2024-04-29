@@ -35,7 +35,7 @@ server:
 
   route:
     enabled: true
-    host: vault.apps.${CLUSTER_NAME}.${SUB_DOMAIN}
+    host: vault.${SUB_DOMAIN}
     tls:
       termination: reencrypt
 

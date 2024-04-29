@@ -5,9 +5,11 @@ namespace: sso
 
 bases:
 - https://github.com/redhat-cop/gitops-catalog/rhsso/rhsso-standalone/overlays/default
-- ../../rhsso-configuration
-#resources:
+
+
+resources:
 #- keycloak-migration-job.yaml
+- ../../rhsso-configuration
 
 patchesJson6902:
   - path: patch-sso-statefulset.yaml

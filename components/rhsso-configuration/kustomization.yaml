@@ -22,11 +22,3 @@ patches:
       kind: ConsoleLink
       name: rhsso
       namespace: sso  
-
-  - target:
-      kind: Route
-      name: sso
-    patch: |
-      - op: replace
-        path: /spec/host
-        value: "sso.${SUB_DOMAIN}"  

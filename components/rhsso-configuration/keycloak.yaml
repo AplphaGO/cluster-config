@@ -12,3 +12,4 @@ spec:
   profile: RHSSO
   externalAccess:
     enabled: true
+    host: sso.${SUB_DOMAIN} 

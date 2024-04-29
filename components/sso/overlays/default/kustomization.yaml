@@ -7,9 +7,9 @@ bases:
 - https://github.com/redhat-cop/gitops-catalog/rhsso/rhsso-standalone/overlays/default
 
 
-resources:
+#resources:
 #- keycloak-migration-job.yaml
-- ../../rhsso-configuration
+#- ../../rhsso-configuration
 
 patchesJson6902:
   - path: patch-sso-statefulset.yaml
@@ -18,6 +18,7 @@ patchesJson6902:
       kind: StatefulSet
       name: sso
       version: v1
+      
 patches:
   - target:
       kind: Route

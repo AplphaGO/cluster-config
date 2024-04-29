@@ -2,6 +2,9 @@ resources:
   - ../../base
   - htpass-secret.yaml
 
+components:
+- ../sso
+
 patches:
   - patch: |-
       - op: add

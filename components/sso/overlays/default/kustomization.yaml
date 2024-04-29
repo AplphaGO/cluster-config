@@ -16,3 +16,12 @@ patchesJson6902:
       kind: StatefulSet
       name: sso
       version: v1
+patches:
+  - target:
+      kind: Route
+      name: sso
+    patch: |
+      - op: replace
+        path: /spec/host
+        value: "sso.${SUB_DOMAIN}"  
+

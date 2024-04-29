@@ -13,7 +13,7 @@ spec:
       - image: klg71/keycloakmigration
         env:
         - name: BASEURL
-          value: "https://sso-sso.apps.hub.lab.local/auth"
+          value: "https://sso.${SUB_DOMAIN}/auth"
         - name: CORRECT_HASHES
           value: "true"
         - name: ADMIN_USERNAME

@@ -3,6 +3,7 @@ kind: Component
  
 resources:
 - oauth-secret.yaml
+- sso-ca.yaml
 #- oidc-client-secret.yaml
 
 #resources:
@@ -20,6 +21,8 @@ patches:
             clientID: ocp-hub-client
             clientSecret:
               name: oidc-client-secret
+            ca:
+              name: router-certs-default
             extraScopes:
             - email
             - profile

@@ -2,18 +2,22 @@ apiVersion: kustomize.config.k8s.io/v1alpha1
 kind: Component
 
 resources:
-- oidc-client-secret.yaml
+- oauth-secret.yaml
+#- oidc-client-secret.yaml
+
+#resources:
+#  - ../../base
 
 patches:
   - patch: |-
       - op: add
         path: /spec/identityProviders/-
         value:
-          name: LabSSO
+          name: KeycloakSSO
           mappingMethod: claim
           type: OpenID
           openID:
-            clientID: openshift
+            clientID: ocp-hub-client
             clientSecret:
               name: oidc-client-secret
             extraScopes:
@@ -34,7 +38,7 @@ patches:
               - email
               groups:
               - groups
-            issuer: https://sso.ocplab.com/realms/ocplab
+            issuer: https://keycloak-sso.${SUB_DOMAIN}/realms/myorg
     target:
       group: config.openshift.io
       kind: OAuth

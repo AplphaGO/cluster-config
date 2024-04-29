@@ -200,24 +200,22 @@ applications:
     source:
       path: components/kyverno-acm/base
 
-  #authentication-sso-operator:
-  #  enabled: false
-  #  annotations:
-  #    argocd.argoproj.io/sync-wave: '31'
-  #  destination:
-  #    namespace: openshift-config
-  #  source:
-  #    path: components/rhsso-operator
-#
-  #
-  #authentication-sso-configuration:
-  #  enabled: false
-  #  annotations:
-  #    argocd.argoproj.io/sync-wave: '32'
-  #  destination:
-  #    namespace: openshift-config
-  #  source:
-  #    path: components/rhsso-configuration
+  authentication-sso-operator:
+    annotations:
+      argocd.argoproj.io/sync-wave: '31'
+    destination:
+      namespace: openshift-config
+    source:
+      path: components/rhsso-operator
+
+  
+  authentication-sso-configuration:
+    annotations:
+      argocd.argoproj.io/sync-wave: '32'
+    destination:
+      namespace: openshift-config
+    source:
+      path: components/rhsso-configuration
 
   vault:
     annotations:

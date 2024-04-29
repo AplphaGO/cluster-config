@@ -17,7 +17,7 @@ patches:
   - patch: |-
       - op: replace
         path: /spec/href
-        value: "https://sso.${SUB_DOMAIN}"
+        value: "https://keycloak-sso.${SUB_DOMAIN}"
     target:
       kind: ConsoleLink
       name: rhsso

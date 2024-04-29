@@ -13,7 +13,7 @@ spec:
   config:
     env:
     - name: VAULT_ADDR
-      value: https://vault.apps.${CLUSTER_NAME}.${SUB_DOMAIN}
+      value: https://vault.${SUB_DOMAIN}
     - name: VAULT_SKIP_VERIFY
       value: "true"
 

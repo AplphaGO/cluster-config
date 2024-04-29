@@ -208,6 +208,16 @@ applications:
     source:
       path: components/sso/overlays/default
 
+  
+  authentication-sso-configuration:
+    annotations:
+      argocd.argoproj.io/sync-wave: '32'
+    destination:
+      namespace: openshift-config
+    source:
+      path: components/rhsso-configuration
+
+
   vault:
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous

@@ -219,6 +219,7 @@ applications:
 
   
   authentication-sso-oauth:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '33'
     destination:

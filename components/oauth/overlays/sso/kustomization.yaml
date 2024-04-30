@@ -14,7 +14,7 @@ patches:
       - op: add
         path: /spec/identityProviders/-
         value:
-          name: KeycloakSSO
+          name: keycloak
           mappingMethod: claim
           type: OpenID
           openID:

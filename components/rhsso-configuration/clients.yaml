@@ -174,8 +174,11 @@ spec:
     id: argocd-client
     clientId: argocd-client
     secret: ocp-secret
+    adminUrl: https://openshift-gitops-server-openshift-gitops.${SUB_DOMAIN}
+    baseUrl: https://openshift-gitops-server-openshift-gitops.${SUB_DOMAIN}
+    rootUrl: https://openshift-gitops-server-openshift-gitops.${SUB_DOMAIN}
     redirectUris:
-      - https://openshift-gitops-server-openshift-gitops.${SUB_DOMAIN}/auth/callback/*
+      - https://openshift-gitops-server-openshift-gitops.${SUB_DOMAIN}/auth/callback
     clientAuthenticatorType: client-secret
     standardFlowEnabled: true
     directAccessGrantsEnabled: true

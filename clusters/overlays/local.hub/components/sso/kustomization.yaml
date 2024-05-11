@@ -4,6 +4,10 @@ resources:
 - sso-ca.yaml
 #- oidc-client-secret.yaml
 
+components:
+#- ../sso
+- ../../../../../components/oauth/overlays/htpass
+
 patches:
   - patch: |-
       - op: add

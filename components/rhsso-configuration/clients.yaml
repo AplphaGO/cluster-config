@@ -163,7 +163,7 @@ spec:
 apiVersion: keycloak.org/v1alpha1
 kind: KeycloakClient
 metadata:
-  name: argocd-client
+  name: argocd-hub-client
   namespace: sso
   labels:
     app: sso
@@ -172,8 +172,8 @@ spec:
     matchLabels:
       app: sso
   client:
-    id: argocd-client
-    clientId: argocd-client
+    id: argocd-hub-client
+    clientId: argocd-hub-client
     secret: ocp-secret
     adminUrl: https://openshift-gitops-server-openshift-gitops.${SUB_DOMAIN}
     baseUrl: https://openshift-gitops-server-openshift-gitops.${SUB_DOMAIN}

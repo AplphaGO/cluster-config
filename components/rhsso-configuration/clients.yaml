@@ -112,7 +112,7 @@ spec:
 #      - query-groups
 #      - query-users
 #      - view-users
-#---
+---
 apiVersion: keycloak.org/v1alpha1
 kind: KeycloakClient
 metadata:
@@ -163,7 +163,7 @@ spec:
 apiVersion: keycloak.org/v1alpha1
 kind: KeycloakClient
 metadata:
-  name: argocd
+  name: argocd-hub-client
   namespace: sso
   labels:
     app: sso
@@ -172,8 +172,8 @@ spec:
     matchLabels:
       app: sso
   client:
-    id: argocd-client
-    clientId: argocd-client
+    id: argocd-hub-client
+    clientId: argocd-hub-client
     secret: ocp-secret
     adminUrl: https://openshift-gitops-server-openshift-gitops.${SUB_DOMAIN}
     baseUrl: https://openshift-gitops-server-openshift-gitops.${SUB_DOMAIN}
@@ -198,6 +198,46 @@ spec:
         "full.path": "false"
         "id.token.claim": "true"
         "userinfo.token.claim": "true"            
-      
-
+---
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakClient
+metadata:
+  name: argocd-spoke4-client
+  namespace: sso
+  labels:
+    app: sso
+spec:
+  realmSelector:
+    matchLabels:
+      app: sso
+  client:
+    id: argocd-spoke4-client
+    clientId: argocd-spoke4-client
+    secret: ocp-secret
+    #adminUrl: https://openshift-gitops-server-openshift-gitops.${SUB_DOMAIN}
+    #baseUrl: https://openshift-gitops-server-openshift-gitops.${SUB_DOMAIN}
+    #rootUrl: https://openshift-gitops-server-openshift-gitops.${SUB_DOMAIN}
+    adminUrl: https://openshift-gitops-server-openshift-gitops.apps.spoke4.lab.local
+    baseUrl: https://openshift-gitops-server-openshift-gitops.apps.spoke4.lab.local
+    rootUrl: https://openshift-gitops-server-openshift-gitops.apps.spoke4.lab.local
+    redirectUris:
+      - https://openshift-gitops-server-openshift-gitops.apps.spoke4.lab.local/auth/callback
+    clientAuthenticatorType: client-secret
+    standardFlowEnabled: true
+    directAccessGrantsEnabled: true
+    implicitFlowEnabled: false
+    defaultClientScopes:
+      - profile
+      - email
+    consentRequired: false
+    protocolMappers:
+    - name: groups
+      protocol: openid-connect
+      protocolMapper: "oidc-group-membership-mapper"
+      config:
+        "access.token.claim": "true"
+        "claim.name": "groups"
+        "full.path": "false"
+        "id.token.claim": "true"
+        "userinfo.token.claim": "true"            
               

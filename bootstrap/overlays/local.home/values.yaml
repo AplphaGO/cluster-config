@@ -30,6 +30,15 @@ projects:
 
 applications:
 
+
+  authentication-sso-oauth:
+    annotations:
+      argocd.argoproj.io/sync-wave: '33'
+    destination:
+      namespace: openshift-config
+    source:
+      path: clusters/overlays/local.home/components/sso
+
   lvm-operator:
     enabled: false
     annotations:

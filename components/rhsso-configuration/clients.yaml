@@ -41,7 +41,7 @@ spec:
     clientId: ocp-spoke4-client
     secret: ocp-secret
     #rootUrl: https://oauth-openshift.apps.prod.${PLATFORM_BASE_DOMAIN}/oauth2callback
-    rootUrl: https://oauth-openshift.apps.spoke4.lab.loca/oauth2callback
+    rootUrl: https://oauth-openshift.apps.spoke4.lab.local/oauth2callback
     redirectUris:
       - /keycloak
     clientAuthenticatorType: client-secret

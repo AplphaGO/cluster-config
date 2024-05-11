@@ -40,7 +40,7 @@ patches:
               - email
               groups:
               - groups
-            issuer: https://keycloak-sso.${SUB_DOMAIN}/auth/realms/myorg
+            issuer: https://keycloak-sso.apps.hub.lab.local/auth/realms/myorg
     target:
       group: config.openshift.io
       kind: OAuth

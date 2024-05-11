@@ -25,32 +25,33 @@ spec:
       - email
     consentRequired: false
 ---
-#apiVersion: keycloak.org/v1alpha1
-#kind: KeycloakClient
-#metadata:
-#  name: ocp-prod
-#  namespace: sso
-#  labels:
-#    app: sso
-#spec:
-#  realmSelector:
-#    matchLabels:
-#      app: sso
-#  client:
-#    id: ocp-prod-client
-#    clientId: ocp-prod-client
-#    secret: ocp-secret
-#    rootUrl: https://oauth-openshift.apps.prod.${PLATFORM_BASE_DOMAIN}/oauth2callback
-#    redirectUris:
-#      - /oidckeycloak
-#    clientAuthenticatorType: client-secret
-#    standardFlowEnabled: true
-#    directAccessGrantsEnabled: true
-#    implicitFlowEnabled: false
-#    defaultClientScopes:
-#      - profile
-#      - email
-#    consentRequired: false      
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakClient
+metadata:
+  name: spoke4
+  namespace: sso
+  labels:
+    app: sso
+spec:
+  realmSelector:
+    matchLabels:
+      app: sso
+  client:
+    id: ocp-spoke4-client
+    clientId: ocp-spoke4-client
+    secret: ocp-secret
+    #rootUrl: https://oauth-openshift.apps.prod.${PLATFORM_BASE_DOMAIN}/oauth2callback
+    rootUrl: https://oauth-openshift.apps.spoke4.lab.loca/oauth2callback
+    redirectUris:
+      - /oidckeycloak
+    clientAuthenticatorType: client-secret
+    standardFlowEnabled: true
+    directAccessGrantsEnabled: true
+    implicitFlowEnabled: false
+    defaultClientScopes:
+      - profile
+      - email
+    consentRequired: false      
 #---
 #apiVersion: keycloak.org/v1alpha1
 #kind: KeycloakClient

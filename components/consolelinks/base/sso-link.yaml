@@ -3,6 +3,6 @@ kind: ConsoleLink
 metadata:
   name: sso-account
 spec:
-  href: 'https://sso.ocplab.com/realms/ocplab/account'
+  href: 'https://keycloak-sso.apps.hub.lab.local/auth/realms/myorg/account'
   location: UserMenu
   text: Account Settings

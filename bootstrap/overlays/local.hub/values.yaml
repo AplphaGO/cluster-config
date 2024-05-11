@@ -219,13 +219,12 @@ applications:
 
   
   authentication-sso-oauth:
-    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '33'
     destination:
       namespace: openshift-config
     source:
-      path: components/oauth/overlays/sso
+      path: clusters/overlays/local.hub/components/sso
 
   vault:
     annotations:

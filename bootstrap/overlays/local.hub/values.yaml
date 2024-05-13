@@ -249,5 +249,14 @@ applications:
       namespace: vault-config-operator
     source:
       path: components/vault-config-operator
+  
+  vault-config:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '33'
+    destination:
+      namespace: vault-admin
+    source:
+      path: clusters/hub/overlays/vault-config      
 
   

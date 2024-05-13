@@ -257,6 +257,6 @@ applications:
     destination:
       namespace: vault-admin
     source:
-      path: clusters/hub/overlays/vault-config      
+      path: clusters/overlays/local.hub/components/vault-config      
 
   

@@ -99,3 +99,13 @@ applications:
       argocd.argoproj.io/sync-wave: '41'
     source:
       path: components/gitops-admin-plugin/base
+  
+  patch-operator:
+    annotations:
+      argocd.argoproj.io/compare-options: IgnoreExtraneous
+      argocd.argoproj.io/sync-wave: '5'
+    destination:
+      namespace: patch-operator
+    source:
+      path: components/patch-operator
+

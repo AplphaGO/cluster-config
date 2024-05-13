@@ -13,4 +13,5 @@ spec:
       name: keycloak-client-secret-vault
     usernameKey: CLIENT_ID
     passwordKey: CLIENT_SECRET
-  OIDCDiscoveryURL: https://sso.${SUB_DOMAIN}/auth/realms/myorg
+  #OIDCDiscoveryURL: https://sso.${SUB_DOMAIN}/auth/realms/myorg
+  OIDCDiscoveryURL: https://keycloak-sso.${SUB_DOMAIN}/auth/realms/myorg

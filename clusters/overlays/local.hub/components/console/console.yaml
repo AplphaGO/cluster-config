@@ -9,4 +9,4 @@ metadata:
   name: cluster
 spec:
   authentication:
-    logoutRedirect: https://keycloak-sso.apps.hub.lab.local/auth/realms/myorg/protocol/openid-connect/logout?client_id=openshift&post_logout_redirect_uri=https://console-openshift-console.apps.hub.lab.local
+    logoutRedirect: https://keycloak-sso.apps.hub.lab.local/auth/realms/myorg/protocol/openid-connect/logout?client_id=ocp-hub-client&post_logout_redirect_uri=https://console-openshift-console.apps.hub.lab.local

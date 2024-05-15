@@ -13,9 +13,11 @@ spec:
     id: ocp-hub-client
     clientId: ocp-hub-client
     secret: ocp-secret
-    rootUrl: https://oauth-openshift.${SUB_DOMAIN}/oauth2callback
+    #rootUrl: https://oauth-openshift.${SUB_DOMAIN}/oauth2callback
+    #redirectUris:
+    #  - /keycloak
     redirectUris:
-      - /keycloak
+       - https://oauth-openshift.${SUB_DOMAIN}/oauth2callback/*
     clientAuthenticatorType: client-secret
     standardFlowEnabled: true
     directAccessGrantsEnabled: true
@@ -41,9 +43,11 @@ spec:
     clientId: ocp-spoke4-client
     secret: ocp-secret
     #rootUrl: https://oauth-openshift.apps.prod.${PLATFORM_BASE_DOMAIN}/oauth2callback
-    rootUrl: https://oauth-openshift.apps.spoke4.lab.local/oauth2callback
+    #rootUrl: https://oauth-openshift.apps.spoke4.lab.local/oauth2callback
+    #redirectUris:
+    #  - /keycloak
     redirectUris:
-      - /keycloak
+       - https://oauth-openshift.apps.spoke4.lab.local/oauth2callback/*
     clientAuthenticatorType: client-secret
     standardFlowEnabled: true
     directAccessGrantsEnabled: true

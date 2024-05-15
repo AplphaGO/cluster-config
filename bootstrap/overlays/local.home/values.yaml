@@ -69,6 +69,7 @@ applications:
       path: clusters/overlays/local.home/components/banner
 
   console:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '11'
     source:

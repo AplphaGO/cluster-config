@@ -105,6 +105,7 @@ applications:
       path: components/gitops-admin-plugin/base
   
   patch-operator:
+    enabled: false
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
       argocd.argoproj.io/sync-wave: '5'

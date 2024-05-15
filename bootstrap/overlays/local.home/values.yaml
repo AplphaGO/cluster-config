@@ -30,6 +30,11 @@ projects:
 
 applications:
 
+  odf-operator:
+    annotations:
+      argocd.argoproj.io/sync-wave: '1'
+    source:
+      path: components/odf-operator/operator/overlays/no-registry
 
   authentication-sso-oauth:
     annotations:

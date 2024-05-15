@@ -37,6 +37,7 @@ projects:
 applications:
 
   compliance-operator:
+    enabled: false
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
       argocd.argoproj.io/sync-wave: '21'
@@ -72,6 +73,7 @@ applications:
       path: components/helm-repos/base
 
   pipeline-operator:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: "21"
       argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
@@ -87,6 +89,7 @@ applications:
         maxDuration: 3m
 
   dev-console-plugin:
+    enabled: false
     destination:
       namespace: dev-console-plugin
       argocd.argoproj.io/sync-wave: '41'
@@ -94,6 +97,7 @@ applications:
       path: components/dev-console-plugin/base
 
   gitops-admin-plugin:
+    enabled: false
     destination:
       namespace: gitops-admin-plugin
       argocd.argoproj.io/sync-wave: '41'

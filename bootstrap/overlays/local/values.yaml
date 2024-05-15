@@ -85,6 +85,7 @@ applications:
           - /spec/rules
           
   web-terminal:
+     enabled: false
      annotations:
        argocd.argoproj.io/sync-wave: '21'
      destination:

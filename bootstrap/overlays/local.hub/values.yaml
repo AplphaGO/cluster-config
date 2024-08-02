@@ -24,7 +24,7 @@ applications:
       path: clusters/overlays/local.hub/components/node-config
 
   odf-operator:
-    enabled: false
+    enabled: true
     annotations:
       argocd.argoproj.io/sync-wave: '1'
     source:

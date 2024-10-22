@@ -17,7 +17,6 @@ default:
 applications:
 
   cert-manager-operator:
-    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: "2"
     destination:

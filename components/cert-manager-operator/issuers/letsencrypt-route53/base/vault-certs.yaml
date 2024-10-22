@@ -12,5 +12,3 @@ spec:
   - vault.apps.hub.lab.local
   # Service Active FQDN
   - vault.vault.svc.cluster.local
-  organization:
-  - lab.local

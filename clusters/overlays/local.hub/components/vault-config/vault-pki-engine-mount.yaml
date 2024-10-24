@@ -10,7 +10,7 @@ spec:
     serviceAccount:
       name: default          
   type: pki
-  path: /infra/clusters/${CLUSTER_NAME}
+  path: pki
   config:
      # 1 Year
      maxLeaseTTL: "8760h"

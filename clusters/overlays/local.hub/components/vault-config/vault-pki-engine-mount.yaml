@@ -1,0 +1,17 @@
+apiVersion: redhatcop.redhat.io/v1alpha1
+kind: SecretEngineMount
+metadata:
+  name: intermediate
+  namespace: vault-admin
+spec:
+  authentication: 
+    path: hub
+    role: vault-admin
+    serviceAccount:
+      name: default
+  name: intermediate            
+  type: pki
+  path: /infra/clusters/${CLUSTER_NAME}
+  config:
+     # 1 Year
+     maxLeaseTTL; "8760h"

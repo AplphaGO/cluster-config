@@ -1,0 +1,25 @@
+apiVersion: redhatcop.redhat.io/v1alpha1
+kind: PKISecretEngineConfig
+metadata:
+  name: intermediate
+  namespace: vault-admin
+spec:
+  authentication: 
+    path: hub
+    role: vault-admin
+    serviceAccount:
+      name: default
+  path: /infra/clusters/${CLUSTER_NAME}/intermediate
+  commonName: vault.${SUB_DOMAIN}
+  TTL: "8760h"
+  type: intermediate
+  privateKeyType: exported
+  country: CH
+  province: ZH
+  locality: Zurich
+  organization: Red Hat
+  maxPathLength: 1
+  issuingCertificates:
+  - https://vault.${SUB_DOMAIN}/v1/infra/clusters/${CLUSTER_NAME}/intermediate/ca
+  crlDistributionPoints:
+  - https://vault.${SUB_DOMAIN}/v1/infra/clusters/${CLUSTER_NAME}/intermediate/crl"

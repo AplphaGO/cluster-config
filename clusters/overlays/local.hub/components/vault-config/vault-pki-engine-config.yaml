@@ -14,7 +14,7 @@ spec:
   TTL: "8760h"
   type: intermediate
   privateKeyType: exported
-  country: CH
+  country: CN
   province: ZH
   locality: Zurich
   organization: Red Hat

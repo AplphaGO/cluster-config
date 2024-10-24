@@ -8,8 +8,7 @@ spec:
     path: hub
     role: vault-admin
     serviceAccount:
-      name: default
-  name: intermediate            
+      name: default          
   type: pki
   path: /infra/clusters/${CLUSTER_NAME}
   config:

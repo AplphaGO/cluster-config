@@ -17,3 +17,5 @@ resources:
   - ./vault-secret-engine-role.yaml
   - ./infra-secret-reader-policy.yaml  
   - ./infra-secret-reader-role.yaml
+  - ./vault-pki-engine-config.yaml
+  - ./vault-pki-engine-mount.yaml

@@ -9,7 +9,7 @@ spec:
     role: vault-admin
     serviceAccount:
       name: default
-  path: /pki/intermediate
+  path: /pki
   commonName: vault.${SUB_DOMAIN}
   TTL: "8760h"
   type: intermediate

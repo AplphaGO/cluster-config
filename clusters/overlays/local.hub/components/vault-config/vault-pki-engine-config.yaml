@@ -21,7 +21,5 @@ spec:
   maxPathLength: 1
   issuingCertificates:
   - https://vault.${SUB_DOMAIN}/v1/pki/intermediate/ca
-  crlDistributionPoints:
-  - https://vault.${SUB_DOMAIN}/v1/pki/intermediate/crl
   externalSignSecret:
     name: signed-intermediate

@@ -9,7 +9,7 @@ spec:
     role: vault-admin
     serviceAccount:
       name: default
-  path: /pki
+  path: pki/intermediate
   commonName: vault.${SUB_DOMAIN}
   TTL: "8760h"
   type: intermediate
@@ -22,6 +22,6 @@ spec:
   issuingCertificates:
   - https://vault.${SUB_DOMAIN}/v1/pki/intermediate/ca
   crlDistributionPoints:
-  - https://vault.${SUB_DOMAIN}/v1/pki/intermediate/crl"
+  - https://vault.${SUB_DOMAIN}/v1/pki/intermediate/crl
   externalSignSecret:
     name: signed-intermediate

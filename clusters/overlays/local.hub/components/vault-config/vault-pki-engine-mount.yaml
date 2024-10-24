@@ -14,4 +14,4 @@ spec:
   path: /infra/clusters/${CLUSTER_NAME}
   config:
      # 1 Year
-     maxLeaseTTL; "8760h"
+     maxLeaseTTL: "8760h"

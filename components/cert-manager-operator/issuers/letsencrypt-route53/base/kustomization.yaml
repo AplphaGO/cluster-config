@@ -6,7 +6,7 @@ commonAnnotations:
 
 resources:
 - cert-manager-ns.yaml
-- ca-secret.yaml
+#- ca-secret.yaml
 - vault-service-cluster-issuer.yaml
 - vault-certs.yaml
 #- letsencrypt-aws-external.yaml

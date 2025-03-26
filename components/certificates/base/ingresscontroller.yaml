@@ -9,3 +9,21 @@ metadata:
 spec:
   defaultCertificate:
     name: openshift-wildcard-certificate
+  routeAdmission:
+    wildcardPolicy: WildcardsAllowed
+  routeSelector:
+    matchExpressions:
+      - key: hypershift.openshift.io/hosted-control-plane
+        operator: DoesNotExist
+  tuningOptions:
+    reloadInterval: 0s
+  clientTLS:
+    clientCA:
+      name: ''
+    clientCertificatePolicy: ''
+  unsupportedConfigOverrides: null
+  httpErrorCodePages:
+    name: ''
+  replicas: 1
+  httpEmptyRequestsPolicy: Respond
+  httpCompression: {}

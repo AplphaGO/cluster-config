@@ -10,22 +10,23 @@ resources:
 #      group: config.openshift.io
 #      kind: APIServer
 #      name: cluster
-#  - patch: |-
-#      - op: replace
-#        path: /spec/dnsNames
-#        value:
-#          - api.hub.lab.local
-#    target:
-#      kind: Certificate
-#      name: openshift-api
-#  - patch: |-
-#      - op: replace
-#        path: /spec/dnsNames
-#        value:
-#          - '*.apps.hub.lab.local'
-#      - op: replace
-#        path: /spec/commonName
-#        value: '*.apps.hub.lab.local'
-#    target:
-#      kind: Certificate
-#      name: openshift-wildcard
+patches:
+  - patch: |-
+      - op: replace
+        path: /spec/dnsNames
+        value:
+          - api.hub.lab.local
+    target:
+      kind: Certificate
+      name: openshift-api
+  - patch: |-
+      - op: replace
+        path: /spec/dnsNames
+        value:
+          - '*.apps.hub.lab.local'
+      - op: replace
+        path: /spec/commonName
+        value: '*.apps.hub.lab.local'
+    target:
+      kind: Certificate
+      name: openshift-wildcard

@@ -8,7 +8,7 @@ metadata:
 spec:
   secretName: openshift-api-certificate
   issuerRef:
-    name: letsencrypt-prod
+    name: vault-service
     kind: ClusterIssuer
   dnsNames:
   - replace.me

@@ -8,7 +8,7 @@ metadata:
 spec:
   secretName: openshift-wildcard-certificate
   issuerRef:
-    name: letsencrypt-prod
+    name: vault-service
     kind: ClusterIssuer
   commonName: '*.apps.replace.me'
   dnsNames:

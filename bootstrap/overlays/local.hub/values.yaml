@@ -133,7 +133,7 @@ applications:
       path: clusters/overlays/local.hub/components/consolelinks
 
   certificates:
-    enabled: false
+    enabled: true
     annotations:
       argocd.argoproj.io/sync-wave: "3"
     destination:

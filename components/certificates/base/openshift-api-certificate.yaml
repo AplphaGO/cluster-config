@@ -6,8 +6,8 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: '0'
 spec:
-  duration: 1h
-  renewBefore: 10m  
+  #duration: 1h
+  #renewBefore: 10m  
   secretName: openshift-api-certificate
   issuerRef:
     name: vault-service

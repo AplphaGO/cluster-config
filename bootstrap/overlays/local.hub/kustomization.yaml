@@ -5,7 +5,7 @@ helmGlobals:
   chartHome: ./charts
 
 helmCharts:
-- name: argocd-app-of-app=
+- name: argocd-app-of-app
   valuesFile: values.yaml
   namespace: openshift-gitops
 

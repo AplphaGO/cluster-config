@@ -5,8 +5,7 @@ patches:
   - patch: |-
       - op: replace
         path: /spec/servingCerts/namedCertificates/0/names/0
-        value: 
-          - api.hub.lab.local
+        value: 'api.hub.lab.local'
     target:
       group: config.openshift.io
       kind: APIServer

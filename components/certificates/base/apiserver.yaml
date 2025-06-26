@@ -6,6 +6,8 @@ metadata:
     argocd.argoproj.io/sync-wave: "1"
     argocd.argoproj.io/sync-options: Validate=false,ServerSideApply=true
 spec:
+  audit:
+    profile: Default
   servingCerts:
     namedCertificates:
     - names:

@@ -31,12 +31,14 @@ projects:
 applications:
 
   odf-operator:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '1'
     source:
       path: components/odf-operator/operator/overlays/no-registry
 
   authentication-sso-oauth:
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '33'
     destination:

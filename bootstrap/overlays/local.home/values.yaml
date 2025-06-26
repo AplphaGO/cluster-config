@@ -84,7 +84,6 @@ applications:
       path: clusters/overlays/local.home/components/consolelinks
 
   certificates:
-    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: "3"
     destination:

@@ -10,6 +10,18 @@ metadata:
 spec:
   instances: 1
   profile: RHSSO
+  keycloakDeploymentSpec:
+    experimental:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: kubernetes.io/hostname
+                    operator: In
+                    values:
+                      - bootp-73.69-235.rhts.eng.pek2.redhat.com
+    imagePullPolicy: Always
   externalAccess:
     enabled: true
     #host: sso.${SUB_DOMAIN} 

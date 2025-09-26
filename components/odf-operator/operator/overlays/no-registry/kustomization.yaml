@@ -22,13 +22,13 @@ patches:
     target:
       kind: Subscription
       name: odf-operator
-  - patch: |-
-      - op: replace
-        path: /spec/version
-        value: 4.15.19-rhodf
-    target:
-      kind: Subscription
-      name: odf-operator
+  #- patch: |-
+  #    - op: replace
+  #      path: /spec/version
+  #      value: 4.15.19-rhodf
+  #  target:
+  #    kind: Subscription
+  #    name: odf-operator
   - patch: |-
       - op: replace
         path: /spec

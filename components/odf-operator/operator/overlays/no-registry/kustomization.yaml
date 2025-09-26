@@ -14,7 +14,7 @@ patches:
         path: /spec/channel
         value: stable-4.15
       - op: replace
-        path: /sepc/version
+        path: /spec/version
         value: 4.15.19-rhodf
     target:
       kind: Subscription

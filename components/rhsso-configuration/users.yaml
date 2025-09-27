@@ -17,7 +17,7 @@ spec:
     enabled: true
     emailVerified: true
     groups:
-      - cluster-admins
+      - admin
     credentials:
       - temporary: false
         type: password

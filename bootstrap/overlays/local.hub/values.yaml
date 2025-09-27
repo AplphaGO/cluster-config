@@ -244,6 +244,7 @@ applications:
           kind: StatefulSet
   
   vault-config-operator:
+    enabled: false
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
       argocd.argoproj.io/sync-wave: '32'

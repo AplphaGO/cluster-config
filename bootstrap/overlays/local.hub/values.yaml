@@ -40,7 +40,7 @@ applications:
       path: clusters/overlays/local.hub/components/lvm-operator
 
   odf-instance:
-    enabled: true
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '2'
     destination:

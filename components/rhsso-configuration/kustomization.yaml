@@ -10,7 +10,7 @@ resources:
   - users.yaml
   #- groups.yaml # bugs the groups need to be created manually
   #- oauth-secret-policy.yaml
-  #- rbac.yaml
+  - rbac.yaml
 
 patches:
 

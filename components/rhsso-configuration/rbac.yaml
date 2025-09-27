@@ -3,6 +3,8 @@ kind: Group
 apiVersion: user.openshift.io/v1
 metadata:
   name: admin
+users:
+  - admin
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding

@@ -29,10 +29,10 @@ patches:
   #  target:
   #    kind: Subscription
   #    name: odf-operator
-  - patch: |-
-      - op: replace
-        path: /spec
-        value: {}
-    target:
-      kind: OperatorGroup
-      name: openshift-storage
+  #- patch: |-
+  #    - op: replace
+  #      path: /spec
+  #      value: {}
+  #  target:
+  #    kind: OperatorGroup
+  #    name: openshift-storage

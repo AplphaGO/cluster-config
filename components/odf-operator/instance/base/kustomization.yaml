@@ -1,4 +1,4 @@
 resources:
-- storage-cluster.yaml
+#- storage-cluster.yaml
 - storage-system.yaml
-- noobaa-default-backing-store.yaml
+#- noobaa-default-backing-store.yaml

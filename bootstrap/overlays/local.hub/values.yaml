@@ -201,7 +201,7 @@ applications:
       path: components/kyverno-acm/base
 
   authentication-sso-operator:
-    enabled: true
+    enabled: false
     annotations:
       argocd.argoproj.io/sync-wave: '31'
     destination:

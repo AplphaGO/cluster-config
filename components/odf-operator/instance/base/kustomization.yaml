@@ -2,7 +2,7 @@
 namespace: openshift-storage
 
 resources:
-#- storage-cluster.yaml
 - ocs-external-cluster-details-secret.yaml
+- storage-cluster.yaml
 - storage-system.yaml
 #- noobaa-default-backing-store.yaml

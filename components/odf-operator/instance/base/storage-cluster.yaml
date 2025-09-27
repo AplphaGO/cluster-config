@@ -4,6 +4,13 @@ metadata:
   name: ocs-storagecluster
   namespace: openshift-storage
 spec:
-  multiCloudGateway:
-    dbStorageClassName: lvms-vg1
-    reconcileStrategy: standalone
+  # This section tells ODF to connect to an external source
+  external: true
+  externalStorage:
+  # This must match the name of the Secret from Step 2
+    connectionDetails:
+      name: ocs-external-cluster-details-secret
+      kind: Secret
+  #multiCloudGateway:
+  #  dbStorageClassName: lvms-vg1
+  #  reconcileStrategy: standalone

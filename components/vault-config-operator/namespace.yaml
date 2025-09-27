@@ -4,6 +4,7 @@ kind: Namespace
 metadata:
   name: vault-config-operator 
   annotations:
+    openshift.io/node-selector: "controller=false"
     argocd.argoproj.io/sync-options: Delete=false,ServerSideApply=true
   labels:
     openshift.io/cluster-monitoring: "true"

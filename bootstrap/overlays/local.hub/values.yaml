@@ -201,7 +201,7 @@ applications:
       path: components/kyverno-acm/base
 
   authentication-sso-operator:
-    enabled: false
+    enabled: true
     annotations:
       argocd.argoproj.io/sync-wave: '31'
     destination:
@@ -211,7 +211,7 @@ applications:
 
   
   authentication-sso-configuration:
-    enabled: false
+    enabled: true
     annotations:
       argocd.argoproj.io/sync-wave: '32'
     destination:
@@ -244,7 +244,7 @@ applications:
           kind: StatefulSet
   
   vault-config-operator:
-    enabled: false
+    enabled: true
     annotations:
       argocd.argoproj.io/compare-options: IgnoreExtraneous
       argocd.argoproj.io/sync-wave: '32'

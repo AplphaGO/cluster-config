@@ -5,8 +5,9 @@ metadata:
   namespace: openshift-storage
 spec:
   # This section tells ODF to connect to an external source
-  external: true
+
   externalStorage:
+    enable: true
   # This must match the name of the Secret from Step 2
     connectionDetails:
       name: ocs-external-cluster-details-secret

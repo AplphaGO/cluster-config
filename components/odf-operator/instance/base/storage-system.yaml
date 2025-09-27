@@ -1,9 +1,26 @@
 apiVersion: odf.openshift.io/v1alpha1
 kind: StorageSystem
 metadata:
-  name: ocs-storagecluster-storagesystem
+  name: ocs-external-storagesystem
   namespace: openshift-storage
 spec:
-  kind: storagecluster.ocs.openshift.io/v1
+  # These define the StorageCluster that will be created
   name: ocs-storagecluster
   namespace: openshift-storage
+  # This section tells ODF to connect to an external source
+  external: true
+  externalStorage:
+    # This must match the name of the Secret from Step 2
+    connectionDetails:
+      name: ocs-external-cluster-details-secret
+      kind: Secret
+
+#apiVersion: odf.openshift.io/v1alpha1
+#kind: StorageSystem
+#metadata:
+#  name: ocs-storagecluster-storagesystem
+#  namespace: openshift-storage
+#spec:
+#  kind: storagecluster.ocs.openshift.io/v1
+#  name: ocs-storagecluster
+#  namespace: openshift-storage

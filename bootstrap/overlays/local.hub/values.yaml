@@ -22,6 +22,13 @@ applications:
       argocd.argoproj.io/sync-wave: '0'
     source:
       path: clusters/overlays/local.hub/components/node-config
+  
+  kube-descheduler-operator:
+    enabled: true
+    annotations:
+      argocd.argoproj.io/sync-wave: '1'
+    source:
+      path: components/kube-descheduler-operator
 
   odf-operator:
     enabled: true

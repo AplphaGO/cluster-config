@@ -28,7 +28,7 @@ applications:
     annotations:
       argocd.argoproj.io/sync-wave: '1'
     source:
-      path: components/kube-descheduler-operator
+      path: components/kube-descheduler-operator/overlays/stable
 
   odf-operator:
     enabled: true

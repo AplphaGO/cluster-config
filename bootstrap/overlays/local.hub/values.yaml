@@ -30,6 +30,13 @@ applications:
     source:
       path: components/kube-descheduler-operator/overlays/stable
 
+  kube-descheduler-instance:
+  enabled: true
+  annotations:
+    argocd.argoproj.io/sync-wave: '1'
+  source:
+    path: components/kube-descheduler-operator/instance
+
   odf-operator:
     enabled: true
     annotations:

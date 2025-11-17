@@ -9,5 +9,5 @@ spec:
   operatorLogLevel: Normal
   profiles:
     - LifecycleAndUtilization
-  deschedulingIntervalSeconds: 3600
+  deschedulingIntervalSeconds: 720
   managementState: Managed

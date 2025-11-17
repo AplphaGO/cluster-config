@@ -6,8 +6,10 @@ google-secret.yaml
 *-private.yml
 charts
 qnap-tls
-.DS_Store
+*/.DS_Store
 .gitignore
 .git
 .github
 .yamllint
+bootstrap/base/.DS_Store
+.DS_Store

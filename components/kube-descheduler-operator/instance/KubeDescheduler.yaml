@@ -7,7 +7,9 @@ spec:
   logLevel: Normal
   mode: Automatic
   operatorLogLevel: Normal
+  profileCustomizations:
+    devLowNodeUtilizationThresholds: Medium
   profiles:
     - LifecycleAndUtilization
-  deschedulingIntervalSeconds: 720
+  deschedulingIntervalSeconds: 900
   managementState: Managed

@@ -11,3 +11,5 @@ spec:
   kubeletConfig:
     podsPerCore: 10
     maxPods: 450
+    kubeAPIBurst: 200
+    kubeAPIQPS: 100

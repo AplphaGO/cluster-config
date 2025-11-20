@@ -6,7 +6,8 @@ spec:
   autoSizingReserved: true
   machineConfigPoolSelector:
     matchLabels:
-      pools.operator.machineconfiguration.openshift.io/master: ""
+      #pools.operator.machineconfiguration.openshift.io/master: ""
+      machineconfiguration.openshift.io/role: "perf"
   kubeletConfig:
     podsPerCore: 10
     maxPods: 450

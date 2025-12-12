@@ -31,7 +31,7 @@ spec:
   evictionStrategy: None
   featureGates:
     deployTektonTaskResources: false
-    enableCommonBootImageImport: true
+    enableCommonBootImageImport: false
     withHostPassthroughCPU: false
     disableMDevConfiguration: false
     enableApplicationAwareQuota: false

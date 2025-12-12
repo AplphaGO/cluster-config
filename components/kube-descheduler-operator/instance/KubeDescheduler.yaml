@@ -8,6 +8,7 @@ spec:
   mode: Automatic
   operatorLogLevel: Normal
   profileCustomizations:
+    devEnableEvictionsInBackground: true
     devLowNodeUtilizationThresholds: Medium
   profiles:
     - LifecycleAndUtilization

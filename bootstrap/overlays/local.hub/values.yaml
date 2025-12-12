@@ -23,6 +23,20 @@ applications:
     source:
       path: clusters/overlays/local.hub/components/node-config
   
+  virtualization-operator:
+    enabled: true
+    annotations:
+      argocd.argoproj.io/sync-wave: '3'
+    source:
+      path: components/virtualization-operator
+
+  virtualization-instance:
+    enabled: true
+    annotations:
+      argocd.argoproj.io/sync-wave: '4'
+    source:
+      path: clusters/overlays/local.hub/components/virtualization-instance
+  
   kube-descheduler-operator:
     enabled: true
     annotations:

@@ -249,7 +249,7 @@ applications:
 
   
   authentication-sso-oauth:
-    enabled: false
+    enabled: false  # sso enabled at  local level 
     annotations:
       argocd.argoproj.io/sync-wave: '33'
     destination:

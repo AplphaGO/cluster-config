@@ -1,33 +1,59 @@
-apiVersion: group.keycloak.crossplane.io/v1alpha1
-kind: Group
-metadata:
-  name: team-a
-spec:
-  deletionPolicy: Delete
-  forProvider:
-    name: team-a
-    realmId: myorg
-    attributes: 
-      devteam: "true"
----    
-apiVersion: group.keycloak.crossplane.io/v1alpha1
-kind: Group
-metadata:
-  name: team-b
-spec:
-  deletionPolicy: Delete
-  forProvider:
-    name: team-b
-    realmId: myorg
-    attributes: 
-      devteam: "true"    
 ---
-apiVersion: group.keycloak.crossplane.io/v1alpha1
+apiVersion: user.openshift.io/v1
 kind: Group
 metadata:
   name: cluster-admins-sso
-spec:
-  deletionPolicy: Delete
-  forProvider:
-    name: cluster-admins-sso
-    realmId: myorg  
+users:
+  - paco
+
+---
+apiVersion: user.openshift.io/v1
+kind: Group
+metadata:
+  name: team-b
+users:
+  - brad
+  - brumilde
+
+---
+apiVersion: user.openshift.io/v1
+kind: Group
+metadata:
+  name: team-a
+users:
+  - adam
+  - amelie
+
+#apiVersion: group.keycloak.crossplane.io/v1alpha1
+#kind: Group
+#metadata:
+#  name: team-a
+#spec:
+#  deletionPolicy: Delete
+#  forProvider:
+#    name: team-a
+#    realmId: myorg
+#    attributes: 
+#      devteam: "true"
+#---    
+#apiVersion: group.keycloak.crossplane.io/v1alpha1
+#kind: Group
+#metadata:
+#  name: team-b
+#spec:
+#  deletionPolicy: Delete
+#  forProvider:
+#    name: team-b
+#    realmId: myorg
+#    attributes: 
+#      devteam: "true"    
+#---
+#apiVersion: group.keycloak.crossplane.io/v1alpha1
+#kind: Group
+#metadata:
+#  name: cluster-admins-sso
+#spec:
+#  deletionPolicy: Delete
+#  forProvider:
+#    name: cluster-admins-sso
+#    realmId: myorg  

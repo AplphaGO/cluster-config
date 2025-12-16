@@ -8,6 +8,6 @@ roleRef:
   kind: ClusterRole
   name: cluster-admin
 subjects:
-  - apiGroup: rbac.authorization.k8s.io
+  - apiGroup: user.openshift.io/v1
     kind: Group
     name: cluster-admins-sso 

@@ -25,9 +25,9 @@ spec:
 apiVersion: group.keycloak.crossplane.io/v1alpha1
 kind: Group
 metadata:
-  name: admin
+  name: cluster-admins
 spec:
   deletionPolicy: Delete
   forProvider:
-    name: admin
+    name: cluster-admins
     realmId: myorg    

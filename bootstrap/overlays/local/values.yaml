@@ -24,13 +24,13 @@ applications:
     source:
       path: components/cert-manager-operator/aggregate/overlays/letsencrypt
 
-  #authentication-htpass:
-  #  annotations:
-  #    argocd.argoproj.io/sync-wave: '4'
-  #  destination:
-  #    namespace: openshift-config
-  #  source:
-  #    path: components/oauth/overlays/htpass
+  authentication-htpass:
+    annotations:
+      argocd.argoproj.io/sync-wave: '4'
+    destination:
+      namespace: openshift-config
+    source:
+      path: components/oauth/overlays/htpass
 
   registry:
     enabled: false

@@ -1,13 +1,11 @@
 apiVersion: kustomize.config.k8s.io/v1alpha1
 kind: Component
  
-resources:
-- oauth-secret.yaml
-- sso-ca.yaml
-#- oidc-client-secret.yaml
 
-#resources:
-#  - ../../base
+resources:
+  - ../../base
+  - oauth-secret.yaml
+  - sso-ca.yaml
 
 patches:
   - patch: |-

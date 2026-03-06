@@ -18,8 +18,8 @@ patches:
   - patch: |-
       - op: replace
         path: /spec/channel
-        value: stable-4.15
+        value: stable-4.17
     target:
       kind: Subscription
       name: odf-operator
-  - path: patch-namespace-annotation.yaml
+  #- path: patch-namespace-annotation.yaml

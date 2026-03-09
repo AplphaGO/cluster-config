@@ -33,6 +33,18 @@ projects:
       clusterResourceWhitelist:
       - group: '*'
         kind: '*'
+  ocpv-demo:
+    description: Project for ocpv demo
+    namespace: openshift-gitops
+    sourceRepos:
+    - https://github.com/redhat-apac-stp/ocp-virtualization-demos.git
+    destinations: |
+      - namespace: '*'
+        server: https://kubernetes.default.svc
+    extraFields: |
+      clusterResourceWhitelist:
+      - group: '*'
+        kind: '*'
 
 applications:
 

@@ -38,7 +38,7 @@ applications:
       path: clusters/overlays/local.hub/components/virtualization-instance
 
   ocpv-demo:
-    enabled: true
+    enabled: false
     project: ocpv-demo
     labels:
       app-source: local.hub

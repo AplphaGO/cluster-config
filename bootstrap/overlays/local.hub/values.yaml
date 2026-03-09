@@ -48,6 +48,13 @@ applications:
     source:
       repoURL: git@github.com:redhat-apac-stp/ocp-virtualization-demos.git
       path: gitops-virt-ocp-alternate/overlays
+    extraFields: |
+      ignoreDifferences:
+        - group: ""
+          kind: PersistentVolumeClaim
+          jsonPointers:
+          - /spec/dataSource       # 忽略由 CDI 自动镜像生成的旧字段
+          - /spec/dataSourceRef    # 忽略由控制器自动补充的 namespace 或 apiGroup 信息
   
   kube-descheduler-operator:
     enabled: true

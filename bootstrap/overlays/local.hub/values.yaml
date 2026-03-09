@@ -36,6 +36,18 @@ applications:
       argocd.argoproj.io/sync-wave: '4'
     source:
       path: clusters/overlays/local.hub/components/virtualization-instance
+
+  ocpv-demo:
+    enabled: true
+    project: ocpv-demo
+    labels:
+      app-source: local.hub
+      repo: ocp-virtualization-demos
+    annotations:
+      argocd.argoproj.io/sync-wave: '5'
+    source:
+      repoURL: git@github.com:redhat-apac-stp/ocp-virtualization-demos.git
+      path: gitops-virt-ocp-alternate/overlays
   
   kube-descheduler-operator:
     enabled: true

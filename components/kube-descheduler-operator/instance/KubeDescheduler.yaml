@@ -12,5 +12,6 @@ spec:
     devLowNodeUtilizationThresholds: Medium
   profiles:
     - LifecycleAndUtilization
+    - DevKubeVirtRelieveAndMigrate
   deschedulingIntervalSeconds: 900
   managementState: Managed

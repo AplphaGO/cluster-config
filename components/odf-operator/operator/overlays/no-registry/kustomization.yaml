@@ -18,7 +18,7 @@ patches:
   - patch: |-
       - op: replace
         path: /spec/channel
-        value: stable-4.19
+        value: stable-4.20
     target:
       kind: Subscription
       name: odf-operator

@@ -77,14 +77,14 @@ applications:
     source:
       path: components/odf-operator/operator/overlays/no-registry
   
-  NHC:
+  nhc:
     enabled: true
     annotations:
       argocd.argoproj.io/sync-wave: '10'
     source:
       path: components/workload-availability/NHC/operator
 
-  SNR:
+  snr:
     enabled: true
     annotations:
       argocd.argoproj.io/sync-wave: '10'

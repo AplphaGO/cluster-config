@@ -12,14 +12,14 @@ spec:
     name: self-node-remediation-automatic-strategy-template
     namespace: openshift-workload-availability
     kind: SelfNodeRemediationTemplate
-  escalatingRemediations: 
-    - remediationTemplate:
-        apiVersion: self-node-remediation.medik8s.io/v1alpha1
-        name: self-node-remediation-automatic-strategy-template
-        namespace: openshift-workload-availability
-        kind: SelfNodeRemediationTemplate
-      order: 1
-      timeout: 300s
+  #escalatingRemediations: 
+  #  - remediationTemplate:
+  #      apiVersion: self-node-remediation.medik8s.io/v1alpha1
+  #      name: self-node-remediation-automatic-strategy-template
+  #      namespace: openshift-workload-availability
+  #      kind: SelfNodeRemediationTemplate
+  #    order: 1
+  #    timeout: 300s
   selector: 
     matchExpressions:
       - key: virt

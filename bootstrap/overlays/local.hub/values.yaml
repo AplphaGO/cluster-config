@@ -78,7 +78,7 @@ applications:
       path: components/odf-operator/operator/overlays/no-registry
   
   nhc:
-    enabled: false
+    enabled: true
     annotations:
       argocd.argoproj.io/sync-wave: '10'
     source:

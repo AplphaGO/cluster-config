@@ -76,6 +76,20 @@ applications:
       argocd.argoproj.io/sync-wave: '1'
     source:
       path: components/odf-operator/operator/overlays/no-registry
+  
+  NHC:
+    enabled: true
+    annotations:
+      argocd.argoproj.io/sync-wave: '10'
+    source:
+      path: components/workload-availability/NHC/operator
+
+  SNR:
+    enabled: true
+    annotations:
+      argocd.argoproj.io/sync-wave: '10'
+    source:
+      path: components/workload-availability/SNR/operator
 
   lvm-operator:
     enabled: false

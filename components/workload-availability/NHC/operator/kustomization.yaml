@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
  - ./subscription.yaml
+ - ./instance.yaml
 
 
 patches:

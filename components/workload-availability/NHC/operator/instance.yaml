@@ -18,8 +18,8 @@ spec:
         name: self-node-remediation-automatic-strategy-template
         namespace: openshift-workload-availability
         kind: SelfNodeRemediationTemplate
-    order: 1
-    timeout: 300s
+      order: 1
+      timeout: 300s
   selector: 
     matchExpressions:
       - key: virt

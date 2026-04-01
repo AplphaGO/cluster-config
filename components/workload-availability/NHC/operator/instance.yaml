@@ -23,8 +23,9 @@ spec:
   selector: 
     matchExpressions:
       - key: virt
-        operator: equal
-        value: true
+        operator: In
+        values: 
+           - "true"
   unhealthyConditions: 
     - type: Ready
       status: "False"

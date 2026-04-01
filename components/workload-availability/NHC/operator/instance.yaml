@@ -4,7 +4,7 @@ metadata:
   name: nodehealthcheck-sample
 spec:
   minHealthy: 51% 
-  maxUnhealthy: 29% 
+  #maxUnhealthy: 29% 
   pauseRequests: []
   stormCooldownDuration: 60s 
   remediationTemplate: 

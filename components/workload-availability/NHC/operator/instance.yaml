@@ -5,7 +5,7 @@ metadata:
 spec:
   minHealthy: 51% 
   maxUnhealthy: 29% 
-  pauseRequests: {}
+  pauseRequests: []
   stormCooldownDuration: 60s 
   remediationTemplate: 
     apiVersion: self-node-remediation.medik8s.io/v1alpha1
@@ -18,8 +18,8 @@ spec:
         name: self-node-remediation-automatic-strategy-template
         namespace: openshift-workload-availability
         kind: SelfNodeRemediationTemplate
-  order: 1
-  timeout: 300s
+    order: 1
+    timeout: 300s
   selector: 
     matchExpressions:
       - key: virt
